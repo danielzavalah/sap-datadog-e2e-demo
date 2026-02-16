@@ -55,7 +55,7 @@
                             width: "300px",
                             type: "Emphasized",
                             press: function() {
-                                var sUrl = "https://sap-java-backend-courteous-cat-nm.cfapps.us10-001.hana.ondemand.com/sap/opu/odata/orders";
+                                var sUrl = "https://tu-backend.hana.ondemand.com/sap/opu/odata/orders";
                                 fetch(sUrl)
                                     .then(r => r.json())
                                     .then(data => {
@@ -70,7 +70,7 @@
                             width: "300px",
                             type: "Reject",
                             press: function() {
-                                var sUrl = "https://sap-java-backend-courteous-cat-nm.cfapps.us10-001.hana.ondemand.com/sap/opu/odata/error";
+                                var sUrl = "https://tu-backend.hana.ondemand.com/sap/opu/odata/error";
                                 fetch(sUrl).then(r => {
                                     if(!r.ok) MessageToast.show("Error 500 enviado a Datadog");
                                 });
