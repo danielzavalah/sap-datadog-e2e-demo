@@ -1,0 +1,20 @@
+applications:
+- name: sap-java-backend
+  path: target/sap-java-backend-0.0.1-SNAPSHOT.jar
+  memory: 1G
+  stack: cflinuxfs4
+  instances: 1
+  random-route: true
+  buildpacks:
+    - https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/download/4.46.0/datadog-cloudfoundry-buildpack-4.46.0.zip
+    - java_buildpack
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }' # FUERZA JAVA 17
+    DD_API_KEY: "apiKey" 
+    DD_SITE: "datadoghq.com"
+    DD_SERVICE: "sap-java-backend"
+    DD_ENV: "dev"
+    DD_VERSION: "1.0.0"
+    DD_LOGS_INJECTION: "true"
+    DD_RUN_AGENT: "true"
+    DD_APM_INSTRUMENTATION_ENABLED: "true"
