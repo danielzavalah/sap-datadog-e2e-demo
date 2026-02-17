@@ -11,7 +11,7 @@ Este proyecto demuestra la integración de **Full-Stack Observability** conectan
 
 
 
-## 🚀 Configuración del Backend (SAP BTP)
+## 🚀 Configuración de Backend + Frontend
 El backend utiliza el **Datadog Cloud Foundry Buildpack**. El archivo `manifest.yml` incluye las variables necesarias para el despliegue automático del agente.
 
 ```yaml
@@ -19,20 +19,20 @@ applications:
 - name: sap-java-backend
   path: target/demo-0.0.1-SNAPSHOT.jar
   buildpacks:
-    - [https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/download/4.46.0/datadog-cloudfoundry-buildpack-4.46.0.zip](https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/download/4.46.0/datadog-cloudfoundry-buildpack-4.46.0.zip)
+    - https://github.com/DataDog/datadog-cloudfoundry-buildpack/releases/download/4.46.0/datadog-cloudfoundry-buildpack-4.46.0.zip
     - java_buildpack
   env:
     DD_SERVICE: "sap-java-backend"
     DD_ENV: "dev"
     DD_RUN_AGENT: "true"
-
+```
 
 🌐 Configuración del Frontend (RUM)
 El frontend inicializa el SDK de Datadog y habilita el rastreo distribuido hacia el dominio de SAP BTP.
 
 JavaScript
 
-
+```code
 DD_RUM.init({
     clientToken: 'TU_CLIENT_TOKEN',
     applicationId: 'TU_APP_ID',
@@ -42,7 +42,7 @@ DD_RUM.init({
         { match: "[https://tu-backend-btp.hana.ondemand.com](https://tu-backend-btp.hana.ondemand.com)", propagatorTypes: ["tracecontext"] }
     ]
 });
-
+```
 
 📊 Capacidades de la Demo
 Distributed Tracing: Ver el salto exacto desde el clic del usuario hasta el código Java.
