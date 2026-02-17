@@ -71,7 +71,3 @@ git branch -M main
 git remote add origin https://github.com/TU_USUARIO/NOMBRE_DEL_REPO.git
 git push -u origin main
 
-
-💡 Tip de Pro para la Demo
-Cuando estés presentando, puedes abrir tu repo de GitHub y decir: "La implementación es tan estándar y limpia que aquí tengo el repositorio listo para ser desplegado en producción siguiendo las mejores prácticas de observabilidad". Eso da mucha confianza.
-¿Quieres que revisemos cómo quedaron los archivos antes de que des el git push final? (Especialmente para asegurar que no se escape ninguna API Key privada).
