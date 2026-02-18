@@ -55,15 +55,6 @@ Desarrollado para demostraciones técnicas de observabilidad en ecosistemas SAP.
 
 ---
 
-### Paso 2: El empujón final a GitHub
-Ejecuta estos comandos en tu terminal (asegúrate de estar en la carpeta del proyecto):
-
-1. **Inicializa y sube:**
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete e2e sap observability demo"
-
 
 Conecta con tu repo (Copia el link de tu repo en GitHub):
 Bash
