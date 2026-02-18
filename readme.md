@@ -57,8 +57,12 @@ Desarrollado para demostraciones técnicas de observabilidad en ecosistemas SAP.
 
 
 Conecta con tu repo (Copia el link de tu repo en GitHub):
+
 Bash
+
+```code
 git branch -M main
 git remote add origin https://github.com/TU_USUARIO/NOMBRE_DEL_REPO.git
 git push -u origin main
+```
 
